@@ -1,0 +1,37 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[dev-packages]
+
+[requires]
+python_version = "3.5"
+
+[packages]
+attrs = "*"
+"beautifulsoup4" = "*"
+"bs4" = "*"
+certifi = "*"
+colorama = "*"
+cycler = "*"
+decorator = "*"
+django = "*"
+express = "*"
+matplotlib = "*"
+networkx = "*"
+numpy = "*"
+olefile = "*"
+pillow = "*"
+pipenv = "*"
+pluggy = "*"
+py = "*"
+pyparsing = "*"
+pytest = "*"
+pytest-random = "*"
+python-dateutil = "*"
+pytz = "*"
+requests = "*"
+six = "*"
+virtualenv = "*"
+virtualenv-clone = "*"

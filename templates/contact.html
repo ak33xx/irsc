@@ -1,0 +1,177 @@
+{% extends "layout.html" %}
+{% load static from staticfiles %}
+        {% block title %}Contact | IRSC | DTU{% endblock %}
+
+{% block content %}
+    <body class="contact-us">
+
+        <!-- Preloader -->
+        <div class="preloader flex flex-middle flex-center">
+            <div class="wrapper">
+                <div class="loader"></div>
+            </div>
+        </div>
+
+        <!-- Navbar -->
+        <nav class="navbar navbar-burger navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="{% url 'home' %}">IRSC DELTECH</a>
+                    <span class="sr-only">Toggle navigation</span>
+                    <button class="icon icon-menu burger-menu"></button>
+                </div>
+                <div class="menu-wrapper">
+                    <div class="overlay-menu flex flex-middle">
+                        <ul class="navigation" role="menubar">
+                          <li role="menuitem"><a href="{% url 'home' %}">Home</a></li>
+                          <li role="menuitem"><a href="{% url 'about' %}">About</a></li>
+                          <li role="menuitem"><a href="{% url 'contact' %}">Contact</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Header -->
+        <header class="site-header" role="banner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <hgroup class="title-group">
+                            <h1 class="bigtitle">Contact</h1>
+                            <h4>We are a click away</h4>
+                        </hgroup>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Content -->
+        <main class="main" role="main">
+
+            <!-- Address -->
+            <section class="section text-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <hgroup class="title-group">
+                                <h3 class="section-title">Visit Us</h3>
+                                <h5 class="subtitle">We look forward to a conversation</h5>
+                            </hgroup>
+                        </div>
+                        <div class="col-sm-8">
+                            <!-- Gmap -->
+                            <div id="mymap" class="mymap"></div>
+                        </div>
+                        <div class="col-sm-4">
+                            <address class="address">
+                                <h4 class="title">IRSC Delhi Technological University</h4>
+                                <p></p>
+                                <ul class="vcard">
+                                    <li>
+                                        <i class="icon icon-home"></i>
+                                        <span class="vcard-item">IRSC Delhi Technological University<br>bawana road delhi</span>
+                                    </li>
+                                    <li>
+                                        <i class="icon icon-newsletter"></i>
+                                        <span class="vcard-item"><a href="mailto:solvedtu@gmail.com">solvedtu@gmail.com</a></span>
+                                    </li>
+                                    <li>
+                                        <i class="icon icon-phone"></i>
+                                        <span class="vcard-item">+91 72108 11335</span>
+                                    </li>
+                                </ul>
+                            </address>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Form / Address -->
+            <section class="section contact">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <hgroup class="title-group text-center">
+                                <h3 class="section-title">Drop us a line</h3>
+                                <h5 class="subtitle">We will respond as soon as possible</h5>
+                            </hgroup>
+                        </div>
+                        <div class="col-md-8 col-md-offset-2">
+                            <!-- Contact Form -->
+                            <article class="contact-form">
+                                <form action="php/contact-form.php" id="contact-form" role="form">
+                                    <div class="alert alert-success hidden" id="contact-alert-success">
+                                        <strong>Success!</strong> Thank you for your message. Reply will be in a while!
+                                    </div>
+                                    <div class="alert alert-danger hidden" id="contact-alert-error">
+                                        <strong>Error!</strong> Something went wrong sending your message.
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="sr-only" for="name"></label>
+                                                <input type="text" class="form-control" value="" placeholder="Name" data-msg-required="Please enter your name." name="name" id="name">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label class="sr-only" for="email"></label>
+                                                <input type="email" value="" placeholder="E-mail" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." class="form-control" name="email" id="email">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="form-group">
+                                                <label class="sr-only" for="message"></label>
+                                                <textarea placeholder="Enter your message..." data-msg-required="Please enter your message." rows="6" class="form-control" name="message" id="message"></textarea>
+                                            </div>
+                                            <input type="submit" value="Send Message" class="btn btn-submit btn-block" data-loading-text="Loading...">
+                                        </div>
+                                    </div>
+                                </form>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer" role="contentinfo">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="social-list">
+                          <li><a href="https://www.facebook.com/IRSCDelTech/" target="_blank" class="icon icon-facebook"></a></li>
+                          <li><a href="https://www.twitter.com/irscDeltech/" target="_blank" class="icon icon-twitter"></a></li>
+                          <li><a href="https://www.instagram.com/irscdeltech/" target="_blank" class="icon icon-instagram"></a></li>
+                          <li><a href="https://in.pinterest.com/irscDeltech/" target="_blank" class="icon icon-pinterest"></a></li>
+                          <li><a href="mailto:solvedtu@gmail.com" target="_blank" class="icon icon-email"></a></li>
+
+                        </ul>
+                        <nav class="foter-navbar" role="navigation">
+
+                        </nav>
+                        <p class="copyright">&copy; <time datetime="2015">2017</time> IRSC Delhi Technology University, All Rights Reserved, Made with <i class="icon icon-heart"></i> by IRSC DTU Chapter</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+{% endblock %}
+
+{% block contactjs %}
+        <!-- GMap3-->
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+        <script src="{% static 'js/vendor/gmap3.min.js' %}"></script>
+        <script src="{% static 'js/mymap.js' %}"></script>
+
+        <!-- Contact Form -->
+        <script src="{% static 'js/vendor/jquery.validate.min.js' %}"></script>
+        <script src="{% static 'js/contact.js' %}"></script>
+
+{% endblock %}

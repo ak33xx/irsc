@@ -1,1 +1,1 @@
-web: gunicorn irscdtu.wsig
+web: gunicorn irscdtu.wsgi

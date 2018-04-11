@@ -125,7 +125,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'assets')
 ]
 
-STATIC_ROOT = path("static-serve")
+STATIC_ROOT = os.path.join(BASE_DIR, 'static-serve')
 
 ADMINS = (
     ('IRSC', 'solvedtu@gmail.com'),
